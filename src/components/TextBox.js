@@ -53,7 +53,7 @@ export default function TextBox(props) {
       <button className="btn btn-primary mx-2 my-2" onClick={handleCopyClick}>Copy text</button>
       <button className="btn btn-primary mx-2 my-2" onClick={handleClear}>Clear text</button>
       <h3>Your text summary : </h3>
-      <p>Your text contains {Text.split(" ").length} words and {Text.length} letters. </p>
+      <p>Your text contains {Text.split(" ").filter((element)=>{return element.length !== 0 }).length} words and {Text.length} letters. </p>
       </div>
     </div>
   );
